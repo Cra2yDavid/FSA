@@ -33,9 +33,9 @@ Please follow the instructions below to replicate the results in the paper. Note
 
 ```bash
 # IEEE 9241-bus System under S4 (Single 4-Interface) task
-python train.py --case='case9241' --task='S4' --method='MAM' --model='Attention'
+python train.py --case='case9241' --task='S4' --method='FSA' --model='Attention'
 # IEEE 118-bus System under S10 (Single 10-Interface) task
-python train.py --case='case118' --task='S10' --method='MAM' --model='Attention'
+python train.py --case='case118' --task='S10' --method='FSA' --model='Attention'
 ```
 
 ## Contact
