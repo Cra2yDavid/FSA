@@ -1,4 +1,4 @@
-# [ICDE 2024] Factorizable State Attribution for Adjusting Power Flow at Transmission Interface
+# Factorizable State Attribution for Adjusting Power Flow at Transmission Interface
 
 [![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)](LICENSE)
 
