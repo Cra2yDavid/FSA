@@ -10,7 +10,7 @@ Official codebase for paper [Factorizable State Attribution for Adjusting Power 
 ## Overview
 
 **TLDR:**
-We introduce a factorizable state representation learning (FSRL) scheme that disentangles the node state features into four essential electrical factors and employs a state-of-theart GNN to obtain efficient representations of each distinct state factor, effectively alleviating and mitigating the high coupling issue among features. We develop a State Factor Attribution (FSA) map that generates task-adaptive attention weights for distinct state factors. This enables the acquisition of an expressive power system state representation and enhances the interpretability of efficient strategies to address the problem of transmission interface power flow adjustment.
+We introduce a Factorizable State Representation Learning (FSRL) scheme that disentangles the node state features into four essential electrical factors and employs a state-of-theart GNN to obtain efficient representations of each distinct state factor, effectively alleviating and mitigating the high coupling issue among features. We develop a Factorizable State Attribution (FSA) map that generates task-adaptive attention weights for distinct state factors. This enables the acquisition of an expressive power system state representation and enhances the interpretability of efficient strategies to address the problem of transmission interface power flow adjustment.
 
 ![image](https://github.com/Cra2yDavid/FSA/blob/main/method.png)
 
