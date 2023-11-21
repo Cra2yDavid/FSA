@@ -1,0 +1,19 @@
+
+# scripts*
+# plot*
+datasets/ogb*
+__pycache__/
+
+.vscode
+log*
+pre*
+# hessian*
+datasets/cifar-10*
+datasets/tiny-imagenet*
+# fig*
+logs*
+*.pyc
+# *.png
+*.jpg
+# *.pdf
+*.pt
