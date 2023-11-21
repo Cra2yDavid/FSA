@@ -1,6 +1,7 @@
 # a common file to run all exps
 
 import os
+os.environ['CUDA_VISIBLE_DEVICES'] = "2"
 import tianshou as ts
 import torch
 import argparse
@@ -22,7 +23,7 @@ from torch.utils.tensorboard import SummaryWriter
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--case', type=str, default='case118', choices=['case118', 'case9241'])
-    parser.add_argument('--task', type=str, default='M5', choices=['S4', 'S10'])
+    parser.add_argument('--task', type=str, default='S10', choices=['S4', 'S10'])
     parser.add_argument('--method', type=str, default='FSA', choices=['DQN', 'doubleDQN', 'duelingDQN',
                                                                       'PPO', 'A2C', 'FSA'])
     parser.add_argument('--model', type=str, default='Soft', choices=['Attention', 'Soft', 'Concat'])
