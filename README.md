@@ -32,7 +32,10 @@ Please follow the instructions below to replicate the results in the paper. Note
 
 ```bash
 # IEEE 118-bus System under S10 (10-section) task
-python train.py --case='case118' --task='S10' --method='Powerformer' 
+python train.py --case='case118' --task='S10' --method='Powerformer'
+```
+
+```bash
 # IEEE 9241-bus System under S4 (4-section) task
 python train.py --case='case9241' --task='S4' --method='Powerformer' 
 ```
