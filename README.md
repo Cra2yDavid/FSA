@@ -11,7 +11,7 @@ Official codebase for paper [Factorizable State Attribution for Adjusting Power 
 **TLDR:**
 We present a novel transformer architecture tailored for learning robust power system state representations, which strives to optimize power dispatch for the power flow adjustment across different transmission sections. Specifically, our proposed approach, named Powerformer, develops a dedicated section-adaptive attention mechanism, separating itself from the self-attention employed in conventional transformers. This mechanism effectively integrates power system states with transmission section information, which facilitates the development of robust state representations. Furthermore, by considering the graph topology of power system and the electrical attributes of bus nodes, we introduce two customized strategies to further enhance the expressiveness: graph neural network propagation and multi-factor attention mechanism.
 
-![image]()
+![image](https://github.com/Cra2yDavid/Powerformer/blob/main/method.png)
 
 ## Prerequisites
 
