@@ -1,16 +1,15 @@
-# Factorizable State Attribution for Adjusting Power Flow at Transmission Interface
+# Powerformer: A Section-adaptive Transformer for Power Flow Adjustment
 
 [![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg)](LICENSE)
 
-This repo is building for the source code and corresponding data of paper 'Factorizable State Attribution for Adjusting Power Flow at Transmission Interface'.
-Full data and code for reproducing our work will be uploaded within a week.
+This repo is building for the source code and corresponding data of paper 'Powerformer: A Section-adaptive Transformer for Power Flow Adjustment'. Full data and code for reproducing our work will be uploaded within a week.
 
 Official codebase for paper [Factorizable State Attribution for Adjusting Power Flow at Transmission Interface]. This codebase is based on the open-source [Tianshou](https://github.com/thu-ml/tianshou) and [PandaPower](https://github.com/e2nIEE/pandapower) framework and please refer to those repo for more documentation. Baseline methods include [Soft-Module](https://github.com/RchalYang/Soft-Module) and a traditional full-connected neural network.
 
 ## Overview
 
 **TLDR:**
-We introduce a Factorizable State Representation Learning (FSRL) scheme that disentangles the node state features into four essential electrical factors and employs a state-of-theart GNN to obtain efficient representations of each distinct state factor, effectively alleviating and mitigating the high coupling issue among features. We develop a Factorizable State Attribution (FSA) map that generates task-adaptive attention weights for distinct state factors. This enables the acquisition of an expressive power system state representation and enhances the interpretability of efficient strategies to address the problem of transmission interface power flow adjustment.
+We present a novel transformer architecture tailored for learning robust power system state representations, which strives to optimize power dispatch for the power flow adjustment across different transmission sections. Specifically, our proposed approach, named Powerformer, develops a dedicated section-adaptive attention mechanism, separating itself from the self-attention employed in conventional transformers. This mechanism effectively integrates power system states with transmission section information, which facilitates the development of robust state representations. Furthermore, by considering the graph topology of power system and the electrical attributes of bus nodes, we introduce two customized strategies to further enhance the expressiveness: graph neural network propagation and multi-factor attention mechanism.
 
 ![image](https://github.com/Cra2yDavid/FSA/blob/main/method.png)
 
@@ -32,10 +31,10 @@ We introduce a Factorizable State Representation Learning (FSRL) scheme that dis
 Please follow the instructions below to replicate the results in the paper. Note that the model of China realistic 300-bus system is not available due to confidentiality policies of SGCC.
 
 ```bash
-# IEEE 9241-bus System under S4 (Single 4-Interface) task
-python train.py --case='case9241' --task='S4' --method='FSA' --model='Attention'
-# IEEE 118-bus System under S10 (Single 10-Interface) task
-python train.py --case='case118' --task='S10' --method='FSA' --model='Attention'
+# IEEE 118-bus System under S10 (10-section) task
+python train.py --case='case118' --task='S10' --method='Powerformer' 
+# IEEE 9241-bus System under S4 (4-section) task
+python train.py --case='case9241' --task='S4' --method='Powerformer' 
 ```
 
 ## Contact
